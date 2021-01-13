@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Hokemon
 {
@@ -33,7 +31,7 @@ namespace Hokemon
 
         public void get_details()
         {
-            Console.WriteLine("Name:{0}\nHealth: { 1}/{ 2}\nAttack: { 3}\nSpeed { 4}\nDefense: { 5} ", name, health, max_health, attack, speed, defense);
+            Console.WriteLine("Name:{0}\nHealth: {1}/{2}\nAttack: {3}\nSpeed {4}\nDefense: {5} ", name, health, max_health, attack, speed, defense);
         }
 
         public void provide_name()

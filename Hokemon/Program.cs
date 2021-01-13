@@ -18,7 +18,7 @@ namespace Hokemon
 
             //INSANTIATE a second Hokemon
 
-
+                
 
 
         }
