@@ -10,7 +10,7 @@ namespace Hokemon
         public int max_health;
         public int attack;
         public int speed;
-        public int defense;
+        public int defence;
 
         // Below is my CONSTRUCTOR
         public Hokemon()
@@ -20,7 +20,7 @@ namespace Hokemon
             health = random_int_generator(10, max_health);
             attack = random_int_generator(10, 100);
             speed = random_int_generator(10, 100);
-            defense = random_int_generator(10, 100);
+            defence = random_int_generator(10, 100);
 
         }
 
@@ -31,7 +31,7 @@ namespace Hokemon
 
         public void get_details()
         {
-            Console.WriteLine("Name:{0}\nHealth: {1}/{2}\nAttack: {3}\nSpeed {4}\nDefense: {5} ", name, health, max_health, attack, speed, defense);
+            Console.WriteLine("Name:{0}\nHealth: {1}/{2}\nAttack: {3}\nSpeed {4}\nDefence: {5} ", name, health, max_health, attack, speed, defence);
         }
 
         public void provide_name()
@@ -48,7 +48,28 @@ namespace Hokemon
 
             randomValue = rnd.Next(min_value, max_value);
 
-            return randomValue; 
+            return randomValue;
         }
+
+        public int attackCalculator()
+        {
+            int attackValue;
+            Random rnd = new Random();
+
+            attackValue = ((attack * speed) / 2) * rnd.Next(0, 2);
+
+            return attackValue;
+        }
+
+        public int defenceCalculator()
+        {
+            int defenceValue;
+            Random rnd = new Random();
+
+            defenceValue = ((defence * speed) / 2) * rnd.Next(0, 2);
+
+            return defenceValue;
+        }
+        
     }
 }
