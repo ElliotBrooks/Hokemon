@@ -15,7 +15,7 @@ namespace Hokemon
         // Below is my CONSTRUCTOR
         public Hokemon()
         {
-            name = "Hikachu";
+            provide_name();
             max_health = 100;
             health = random_int_generator(10, max_health);
             attack = random_int_generator(10, 100);
@@ -23,10 +23,16 @@ namespace Hokemon
             defence = random_int_generator(10, 100);
 
         }
-
-        public string get_name()
+        
+        public void definition()
         {
-            return name;
+            Console.WriteLine("I am {0} a member of the hokemon tribe!!", name);
+        }
+
+        public string Name
+        {
+           get { return name; }
+           set { name = value; }
         }
 
         public void get_details()
