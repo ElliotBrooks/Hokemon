@@ -72,7 +72,7 @@ namespace Hokemon
             int defenceValue;
             Random rnd = new Random();
 
-            defenceValue = ((defence * speed) / 2) * rnd.Next(0, 2);
+            defenceValue = (defence * speed) / 10 * rnd.Next(0, 2);
 
             return defenceValue;
         }
